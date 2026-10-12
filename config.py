@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot token
-token = "MTUzMjkyMjIxNzIxNjYxMDQ3NQ.GPasVs.emKIUtxSQYrY6XGvaeV_JZ0zTrGK4rIohehxiQ"
+token = os.getenv("DISCORD_TOKEN", "")
 
 # Mã khôi phục khi dùng /restore
 recover_key = "Ayane"
@@ -18,7 +18,7 @@ roleid = "1558000426953998367"
 CLIENT_ID = "1532922217216610475"
 
 # Client Secret của Discord Application
-CLIENT_SECRET = "xzegQ3WABl8WU4XpS1J2gxwVGvt8Fp7-"
+CLIENT_SECRET = os.getenv("CLIENT_SECRET", "")
 
 # URL Webserver (Ví dụ: http://localhost:3000 hoặc https://domain-cua-ban.com)
 BASE_URL = 'http://bots.meowlix.us:3094'
@@ -30,7 +30,7 @@ WEB_IP = '0.0.0.0'
 WEB_PORT = 3094
 
 # Secret Key cho Session Dashboard
-SECRET_KEY = "super-secret-key-change-this"
+SECRET_KEY = os.getenv("SECRET_KEY", "super-secret-key-change-this")
 
 REDIRECT_URI = BASE_URL + '/callback'
 DASHBOARD_REDIRECT_URI = BASE_URL + '/dashboard/callback'
