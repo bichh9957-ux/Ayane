@@ -1,3 +1,7 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 # Bot token
 token = "MTUzMjkyMjIxNzIxNjYxMDQ3NQ.GPasVs.emKIUtxSQYrY6XGvaeV_JZ0zTrGK4rIohehxiQ"
 
