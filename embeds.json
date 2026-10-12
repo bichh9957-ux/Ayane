@@ -1,0 +1,13 @@
+{
+        "verify_panel": {
+                    "title": "{emoji:shield} XÁC THỰC TÀI KHOẢN",
+                            "description": "{emoji:link} Để xác thực tài khoản và nhận quyền truy cập máy chủ, vui lòng nhấp vào liên kết dưới đây:\n\n👉 **[NHẤP VÀO ĐÂY ĐỂ XÁC THỰC]({oauth_url})**\n\n{emoji:info} *Sau khi hoàn tất đăng nhập OAuth2, bạn sẽ tự động nhận được vai trò thành viên!*",
+                                    "color": "#32CD32",
+                                            "footer": "Hệ thống xác thực Discord OAuth2",
+                                                    "author": "Xác Thực Tự Động",
+                                                            "thumbnail": ""
+        }
+}
+
+        }
+}

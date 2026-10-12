@@ -1,0 +1,24 @@
+{
+        "verify": "✅",
+            "success": "🎉",
+                "error": "❌",
+                    "warning": "⚠️",
+                        "info": "ℹ️",
+                            "bot": "🤖",
+                                "user": "👤",
+                                    "shield": "🛡️",
+                                        "link": "🔗",
+                                            "database": "💾",
+                                                "refresh": "🔄",
+                                                    "settings": "⚙️",
+                                                        "star": "⭐",
+                                                            "check": "✔",
+                                                                "cross": "✖",
+                                                                    "lock": "🔒",
+                                                                        "key": "🔑",
+                                                                            "crown": "👑",
+                                                                                "rocket": "🚀",
+                                                                                    "ping": "🏓"
+}
+
+}

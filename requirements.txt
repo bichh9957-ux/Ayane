@@ -1,0 +1,9 @@
+fastapi
+requests
+asyncio
+py-cord
+uvicorn
+starlette
+pyjwt
+itsdangerous
+
