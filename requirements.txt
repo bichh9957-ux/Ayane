@@ -6,4 +6,5 @@ uvicorn
 starlette
 pyjwt
 itsdangerous
+python-dotenv
 
