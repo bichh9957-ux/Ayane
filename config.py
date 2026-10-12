@@ -21,7 +21,7 @@ CLIENT_ID = "1532922217216610475"
 CLIENT_SECRET = os.getenv("CLIENT_SECRET", "")
 
 # URL Webserver (Ví dụ: http://localhost:3000 hoặc https://domain-cua-ban.com)
-BASE_URL = 'http://bots.meowlix.us:3094'
+BASE_URL = 'https://oauth2.ayane.isroot.in'
 
 # IP Webserver
 WEB_IP = '0.0.0.0'
