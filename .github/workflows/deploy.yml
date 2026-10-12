@@ -1,18 +1,33 @@
-name: Chạy Code Trên VPS
+name: Deploy Python Discord Bot & Web to VPS
 
 on:
   push:
-    branches: [ "main" ] # Hoặc đổi thành "master" nếu repo của bạn dùng nhánh master
+    branches: [ "main" ] # Hoặc thay bằng master tùy theo nhánh của bạn
 
 jobs:
-  build-and-run:
-    runs-on: self-hosted # Dòng này bắt buộc để chỉ định chạy trên VPS của bạn
+  deploy:
+    runs-on: self-hosted
 
     steps:
-    - name: Kéo code mới nhất về VPS
+    - name: Kéo code mới nhất từ GitHub về VPS
       uses: actions/checkout@v4
 
-    - name: Kiểm tra thư mục code trên VPS
+    - name: Cài đặt môi trường và khởi chạy Bot ngầm
       run: |
-        echo "Đang chạy thử nghiệm trên VPS thành công!"
-        ls -la
+        # Cài đặt pip và python3-pip nếu VPS chưa có
+        sudo apt-get update && sudo apt-get install -y python3-pip python3-venv
+
+        # Cài đặt các thư viện Python cần thiết từ dự án
+        pip3 install -r requirements.txt --break-system-packages
+
+        # Cài đặt NodeJS và PM2 để quản lý tiến trình chạy ngầm nếu chưa có
+        if ! command -v pm2 &> /dev/null; then
+          sudo apt-get install -y nodejs npm
+          sudo npm install pm2 -g
+        fi
+
+        # Dừng bot cũ đang chạy (nếu có) để giải phóng cổng mạng và cập nhật phiên bản mới
+        pm2 delete discord-oauth2-bot || true
+
+        # Kích hoạt khởi chạy file Python chính (main.py) chạy ngầm vĩnh viễn
+        pm2 start main.py --name "discord-oauth2-bot" --interpreter python3
