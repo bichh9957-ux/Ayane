@@ -2,34 +2,23 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# Bot token
 token = os.getenv("DISCORD_TOKEN", "")
 
-# Mã khôi phục khi dùng /restore
 recover_key = "Ayane"
 
-# Guild ID của bạn
 guildid = "1373474219714805821"
 
-# ID vai trò được cấp khi xác thực
 roleid = "1558000426953998367"
 
-# Client ID của Discord Application
 CLIENT_ID = "1532922217216610475"
 
-# Client Secret của Discord Application
 CLIENT_SECRET = os.getenv("CLIENT_SECRET", "")
 
-# URL Webserver (Ví dụ: http://localhost:3000 hoặc https://domain-cua-ban.com)
 BASE_URL = 'https://oauth2.ayane.isroot.in'
 
-# IP Webserver
 WEB_IP = '0.0.0.0'
 
-# Port Webserver
 WEB_PORT = 3094
-
-# Secret Key cho Session Dashboard
 SECRET_KEY = os.getenv("SECRET_KEY", "super-secret-key-change-this")
 
 REDIRECT_URI = BASE_URL + '/callback'
